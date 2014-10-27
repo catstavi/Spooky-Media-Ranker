@@ -1,0 +1,2 @@
+class HistoricalMediaController < ApplicationController
+end

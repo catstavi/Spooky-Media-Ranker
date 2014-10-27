@@ -1,0 +1,2 @@
+class CurrentMediaController < ApplicationController
+end

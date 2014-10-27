@@ -1,0 +1,2 @@
+class FictionalMediaController < ApplicationController
+end
