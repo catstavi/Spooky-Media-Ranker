@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027205510) do
+ActiveRecord::Schema.define(version: 20141027224119) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20141027205510) do
     t.date     "born_on"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "rank"
   end
 
   create_table "fictional_media", force: true do |t|
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 20141027205510) do
     t.string   "context"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "rank"
   end
 
   create_table "historical_media", force: true do |t|
@@ -38,6 +40,7 @@ ActiveRecord::Schema.define(version: 20141027205510) do
     t.date     "born_on"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "rank"
   end
 
 end
