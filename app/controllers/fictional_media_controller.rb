@@ -12,6 +12,10 @@ class FictionalMediaController < ApplicationController
     @medium = FictionalMedium.find(params[:id])
   end
 
+  def new
+    @medium = FictionalMedium.new
+  end
+
   def update
     # raise params.inspect
     @medium = FictionalMedium.find(params[:id])

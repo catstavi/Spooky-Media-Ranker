@@ -12,6 +12,10 @@ class HistoricalMediaController < ApplicationController
     @medium = HistoricalMedium.find(params[:id])
   end
 
+  def new
+    @medium = HistoricalMedium.new
+  end
+
   def update
     # raise params.inspect
     @medium = HistoricalMedium.find(params[:id])
