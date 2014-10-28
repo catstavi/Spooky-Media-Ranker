@@ -23,6 +23,10 @@ class CurrentMediaController < ApplicationController
       end
     end
 
+    def new
+      @medium = CurrentMedium.new
+    end
+
     def edit
       @medium = CurrentMedium.find(params[:id])
     end

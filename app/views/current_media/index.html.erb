@@ -1,1 +1,3 @@
-<%= render 'shared/index_pages', objs: @all_sorted, newpath: new_current_medium_path %>
+<%= render 'shared/index_pages', objs: @all_sorted %>
+
+<%= button_to "Add a Current Medium", new_current_medium_path, method: :get %>

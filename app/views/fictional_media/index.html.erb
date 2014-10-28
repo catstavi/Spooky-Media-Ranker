@@ -1,1 +1,2 @@
-<%= render 'shared/index_pages', objs: @all_sorted, newpath: new_fictional_medium_path %>
+<%= render 'shared/index_pages', objs: @all_sorted %>
+<%= button_to "Add a Fictional Medium", new_fictional_medium_path, method: :get %>
