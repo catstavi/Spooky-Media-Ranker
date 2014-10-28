@@ -4,14 +4,14 @@ class CurrentMediaController < ApplicationController
       @all_sorted = CurrentMedium.all.sort_by { |medium| medium.rank }.reverse
     end
 
-    def upvote
-      medium = CurrentMedium.find(params[:id])
-      medium.rank += 1
-      if medium.save
-        redirect_to current_media_path
-      else
-        redirect_to current_media_path, notice: "You vote could not be counted."
-      end
+    def show
+      @medium = CurrentMedium.find(params[:id])
+    end
+
+    def destroy
+      @medium = CurrentMedium.find(params[:id])
+      @medium.destroy
+      redirect_to root_path
     end
 
     def update

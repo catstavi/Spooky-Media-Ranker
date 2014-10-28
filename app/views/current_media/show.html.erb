@@ -1,0 +1,9 @@
+<h1> <%= @medium.name %> </h1>
+<h2> <%= @medium.born_on %> </h2>
+<h3> Ranked: <%= @medium.rank %> </h3>
+
+<section>
+  <%= @medium.description %>
+</section>
+<%= render 'shared/upvote_button', obj: @medium %>
+<%= button_to 'Delete', @medium, method: :delete, data: { confirm: "Are you sure?" } %>

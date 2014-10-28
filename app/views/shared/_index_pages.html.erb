@@ -14,10 +14,7 @@
         <%= link_to(medium.name, medium) %>
       </td>
       <td>
-        <%= form_for medium, method: :patch do |f| %>
-          <%= f.hidden_field :rank, value: medium.rank+1 %>
-          <%= f.submit "Upvote" %>
-        <% end %>
+        <%= render 'shared/upvote_button', obj: medium %>
       </td>
     </tr>
   <% end %>

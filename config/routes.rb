@@ -3,11 +3,7 @@ Rails.application.routes.draw do
   resources :fictional_media
   resources :historical_media
   resources :current_media
-
-  patch "fictional_media/:id/upvote",   to: "fictional_media#upvote", as: :fm_upvote
-  patch "historical_media/:id/upvote",  to: "historical_media#upvote", as: :hm_upvote
-  patch "current_media/:id/upvote",     to: "current_media#upvote", as: :cm_upvote
-
+  
   root "pages#main"
 
   # The priority is based upon order of creation: first created -> highest priority.
