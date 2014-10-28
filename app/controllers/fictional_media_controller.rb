@@ -1,17 +1,24 @@
 class FictionalMediaController < ApplicationController
-  
+
   def index
     @all_sorted = FictionalMedium.all.sort_by { |medium| medium.rank }.reverse
   end
 
-  def upvote
-    medium = FictionalMedium.find(params[:id])
-    medium.rank += 1
-    if medium.save
-      redirect_to fictional_media_path
+  def update
+    # raise params.inspect
+    @medium = FictionalMedium.find(params[:id])
+    if @medium.update(fm_params)
+      redirect_to @medium
     else
-      redirect_to fictional_media_path, notice: "You vote could not be counted."
+      render :edit
     end
   end
+
+  private
+
+  def fm_params
+    params.require(:fictional_medium).permit(:name, :description, :born_on, :rank)
+  end
+
 
 end

@@ -4,14 +4,20 @@ class HistoricalMediaController < ApplicationController
     @all_sorted = HistoricalMedium.all.sort_by { |medium| medium.rank }.reverse
   end
 
-  def upvote
-    medium = HistoricalMedium.find(params[:id])
-    medium.rank += 1
-    if medium.save
-      redirect_to historical_media_path
+  def update
+    # raise params.inspect
+    @medium = HistoricalMedium.find(params[:id])
+    if @medium.update(hm_params)
+      redirect_to @medium
     else
-      redirect_to historical_media_path, notice: "You vote could not be counted."
+      render :edit
     end
+  end
+
+  private
+
+  def hm_params
+    params.require(:historical_medium).permit(:name, :description, :born_on, :rank)
   end
 
 end
