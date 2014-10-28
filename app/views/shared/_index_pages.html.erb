@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <th> Ranking </th>
+    <th> Name </th>
+    <th> Upvote </th>
+  </tr>
+
+  <% @all_sorted.each do |medium| %>
+    <tr>
+      <td>
+        <%= medium.rank %>
+      </td>
+      <td>
+        <%= link_to(medium.name, medium) %>
+      </td>
+      <td>
+        <%= form_for medium, method: :patch do |f| %>
+          <%= f.hidden_field :rank, value: medium.rank+1 %>
+          <%= f.submit "Upvote" %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+
+</table>
+
+<%= button_to "View all Mediums", root_path, method: :get %>
+<%= button_to "Add a Historical Medium", newpath, method: :get %>
