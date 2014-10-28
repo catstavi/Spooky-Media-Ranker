@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <th> Ranking </th>
+    <th> Name </th>
+    <th> Upvote </th>
+  </tr>
+
+  <% @all_sorted.each do |medium| %>
+    <tr>
+      <td>
+        <%= medium.rank %>
+      </td>
+      <td>
+        <%= medium.name %>
+      </td>
+      <td>
+        <%= button_to "Upvote", fm_upvote_path(medium.id), method: :patch %>
+      </td>
+    </tr>
+  <% end %>
+
+</table>
+
+<%= button_to "View all Mediums", root_path, method: :get %>
+<%= button_to "Add a Fictional Medium", new_fictional_medium_path, method: :get %>
