@@ -15,7 +15,6 @@ class CurrentMediaController < ApplicationController
     end
 
     def update
-      # raise params.inspect
       @medium = CurrentMedium.find(params[:id])
       if @medium.update(cm_params)
         redirect_to @medium
@@ -24,10 +23,14 @@ class CurrentMediaController < ApplicationController
       end
     end
 
+    def edit
+      @medium = CurrentMedium.find(params[:id])
+    end
+
     private
 
     def cm_params
-      params.require(:current_medium).permit(:name, :description, :born_on, :rank)
+      params.require(:current_medium).permit(:name, :description, :hometown, :rank)
     end
 
 end

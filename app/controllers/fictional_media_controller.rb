@@ -4,6 +4,14 @@ class FictionalMediaController < ApplicationController
     @all_sorted = FictionalMedium.all.sort_by { |medium| medium.rank }.reverse
   end
 
+  def show
+    @medium = FictionalMedium.find(params[:id])
+  end
+
+  def edit
+    @medium = FictionalMedium.find(params[:id])
+  end
+
   def update
     # raise params.inspect
     @medium = FictionalMedium.find(params[:id])
@@ -17,7 +25,7 @@ class FictionalMediaController < ApplicationController
   private
 
   def fm_params
-    params.require(:fictional_medium).permit(:name, :description, :born_on, :rank)
+    params.require(:fictional_medium).permit(:name, :description, :context, :rank)
   end
 
 

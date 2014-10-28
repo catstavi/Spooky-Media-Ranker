@@ -1,0 +1,12 @@
+<h1> <%= @medium.name %> </h1>
+<h2> <%= @medium.hometown%> </h2>
+<h3> Ranked: <%= @medium.rank %> </h3>
+
+<section>
+  <%= @medium.description %>
+</section>
+<%= render 'shared/upvote_button', obj: @medium %>
+<%= button_to "Edit #{@medium.name}", edit_historical_medium_path(@medium.id), method: :get %>
+<%= button_to 'Delete', @medium, method: :delete, data: { confirm: "Are you sure?" } %>
+<%= button_to "View all Historical Mediums", historical_media_path, method: :get %>
+<%= button_to "View all Mediums", root_path, method: :get %>
