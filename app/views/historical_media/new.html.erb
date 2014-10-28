@@ -1,6 +1,7 @@
 <h1> New Historical Medium </h1>
 
 <%= form_for @medium, url: @medium do |f| %>
+    <%= f.hidden_field :rank, value: 0 %>
     <%= f.label :name %>
     <%= f.text_field :name %>
     <br>

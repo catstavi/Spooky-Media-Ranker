@@ -27,6 +27,15 @@ class CurrentMediaController < ApplicationController
       @medium = CurrentMedium.new
     end
 
+    def create
+      @medium = CurrentMedium.new(cm_params)
+      if @medium.save
+        redirect_to @medium
+      else
+        render :edit
+      end
+    end
+
     def edit
       @medium = CurrentMedium.find(params[:id])
     end

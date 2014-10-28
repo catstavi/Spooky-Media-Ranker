@@ -16,6 +16,15 @@ class HistoricalMediaController < ApplicationController
     @medium = HistoricalMedium.new
   end
 
+  def create
+    @medium = HistoricalMedium.new(hm_params)
+    if @medium.save
+      redirect_to @medium
+    else
+      render :edit
+    end
+  end
+
   def update
     # raise params.inspect
     @medium = HistoricalMedium.find(params[:id])

@@ -8,12 +8,21 @@ class FictionalMediaController < ApplicationController
     @medium = FictionalMedium.find(params[:id])
   end
 
+  def new
+    @medium = FictionalMedium.new
+  end
+
   def edit
     @medium = FictionalMedium.find(params[:id])
   end
 
-  def new
-    @medium = FictionalMedium.new
+  def create
+    @medium = FictionalMedium.new(fm_params)
+    if @medium.save
+      redirect_to @medium
+    else
+      render :edit
+    end
   end
 
   def update
