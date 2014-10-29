@@ -1,32 +1,36 @@
 
 <h3> Rank Mediums! </h3>
+  <div class = "row">
+    <div class = "col-sm-4">
+      <div class="top-five" id= "top-historical">
+        <h2> Historical Mediums</h2>
+          <% @hist_ms.each do |medium| %>
+            <h3> <%= link_to medium.name, historical_medium_path(medium.id) %>
+            <small> ranked: <%= medium.rank %> </small></h3>
+          <% end %>
+          <%= link_to "View more", historical_media_path %>
+      </div>
+    </div>
 
-<div class="top-five" id= "top-historical">
-  <h2> Historical Mediums</h2>
-    <% @hist_ms.each do |medium| %>
-      <%= link_to medium.name, historical_medium_path(medium.id) %>
-      ranked: <%= medium.rank %>
-      <br>
-    <% end %>
-    <%= link_to "View more", historical_media_path %>
-</div>
+  <div class="col-sm-4">
+    <div class="top-five" id= "top-fictional">
+      <h2> Fictional Mediums</h2>
+        <% @fict_ms.each do |medium| %>
+          <h3> <%= link_to medium.name, fictional_medium_path(medium.id) %>
+          <small> ranked: <%= medium.rank %> </small> </h3>
+        <% end %>
+        <%= link_to "View more", fictional_media_path %>
+    </div>
+  </div>
 
-<div class="top-five" id= "top-fictional">
-  <h2> Fictional Mediums</h2>
-    <% @fict_ms.each do |medium| %>
-      <%= link_to medium.name, fictional_medium_path(medium.id) %>
-      ranked: <%= medium.rank %>
-      <br>
-    <% end %>
-    <%= link_to "View more", fictional_media_path %>
-</div>
-
-<div class="top-five" id= "top-current">
-  <h2> Current Mediums </h2>
-    <% @curr_ms.each do |medium| %>
-      <%= link_to medium.name, current_medium_path(medium.id) %>
-      ranked: <%= medium.rank %>
-      <br>
-    <% end %>
-    <%= link_to "View more", current_media_path %>
-</div>
+  <div class="col-sm-4">
+    <div class="top-five" id= "top-current">
+      <h2> Current Mediums </h2>
+        <% @curr_ms.each do |medium| %>
+          <h3> <%= link_to medium.name, current_medium_path(medium.id) %>
+          <small>ranked: <%= medium.rank %></small> </h3>
+        <% end %>
+        <%= link_to "View more", current_media_path %>
+    </div>
+  </div>
+  </div> <!-- Ends row class -->

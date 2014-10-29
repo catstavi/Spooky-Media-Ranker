@@ -14,13 +14,32 @@
  *= require_self
  */
 
-.top-five {
-  display: inline;
-  width: 30%;
-  border: 1px dotted green;
-  float: left;
+.page-header {
+  background: url('boo_ghost_sm.png');
+  background-repeat: no-repeat;
+  margin: 40px 0 20px 10px;
 }
 
-html {
-  /*background-color: red;*/
+.page-header h1 {
+  margin-left: 125px;
+}
+
+body {
+  background: #867A8C;
+}
+
+small {
+  color: #504954 !important;
+}
+
+h1, h2, h3, h4 {
+  color: #3A2640;
+}
+
+a {
+  color: #572811;
+}
+
+a:hover {
+  color: #97461E;
 }

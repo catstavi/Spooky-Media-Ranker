@@ -7,12 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <h1><%= link_to "Medium Ranker", root_path %></h1>
-    <hr>
-  </header>
+  <div class= "container">
+      <div class="page-header">
+        <h1>
+          <%= link_to "Medium Ranker", root_path %>
+          <small>Who's the spookiest?</small>
+        </h1>
+      </div>
 
-<%= yield %>
+    <%= yield %>
+  </div> <!-- container -->
 
 </body>
 </html>
