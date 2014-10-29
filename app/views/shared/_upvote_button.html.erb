@@ -1,4 +1,4 @@
-<%= form_for obj, method: :patch do |f| %>
+<%= bootstrap_form_for obj, method: :patch do |f| %>
   <%= f.hidden_field :rank, value: obj.rank+1 %>
   <%= f.submit "Upvote" %>
 <% end %>

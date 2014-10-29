@@ -32,9 +32,15 @@ a:hover {
 }
 
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
-  border-top: 1px solid #94441D !important;
+  border-top: none !important;
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
   background-color: #A16337;
+}
+
+footer {
+  text-align: right;
+  margin-top: 2em;
+  margin-bottom: .5em;
 }
