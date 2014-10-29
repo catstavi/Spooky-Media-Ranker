@@ -21,7 +21,7 @@ class HistoricalMediaController < ApplicationController
     if @medium.save
       redirect_to @medium
     else
-      render :edit
+      render :new
     end
   end
 
