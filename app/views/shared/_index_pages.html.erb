@@ -1,24 +1,28 @@
-<table>
-  <tr>
-    <th> Ranking </th>
-    <th> Name </th>
-    <th> Upvote </th>
-  </tr>
+<div class= "row">
+  <div class="col-lg-12">
+    <table class="table table-hover">
+      <tbody>
+        <tr>
+          <th> Ranking </th>
+          <th> Name </th>
+          <th> Upvote </th>
+        </tr>
 
-  <% objs.each do |medium| %>
-    <tr>
-      <td>
-        <%= medium.rank %>
-      </td>
-      <td>
-        <%= link_to(medium.name, medium) %>
-      </td>
-      <td>
-        <%= render 'shared/upvote_button', obj: medium %>
-      </td>
-    </tr>
-  <% end %>
-
-</table>
-
-<%= button_to "View all Mediums", root_path, method: :get %>
+        <% objs.each do |medium| %>
+          <tr>
+            <td>
+              <%= medium.rank %>
+            </td>
+            <td>
+              <%= link_to(medium.name, medium) %>
+            </td>
+            <td>
+              <%= render 'shared/upvote_button', obj: medium %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= button_to "View all Mediums", root_path, method: :get %>
+  </div>
+</div> <!-- row class -->

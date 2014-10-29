@@ -14,32 +14,6 @@
  *= require_self
  */
 
-.page-header {
-  background: url('boo_ghost_sm.png');
-  background-repeat: no-repeat;
-  margin: 40px 0 20px 10px;
-}
-
-.page-header h1 {
-  margin-left: 125px;
-}
-
-body {
-  background: #867A8C;
-}
-
-small {
-  color: #504954 !important;
-}
-
-h1, h2, h3, h4 {
-  color: #3A2640;
-}
-
-a {
-  color: #572811;
-}
-
-a:hover {
-  color: #97461E;
-}
+/*
+ *= require rails_bootstrap_forms
+ */

@@ -1,0 +1,39 @@
+
+.page-header {
+  background: url('boo_ghost_sm.png');
+  background-repeat: no-repeat;
+  margin: 40px 0 20px 10px;
+  border-bottom: 2px solid #BD5726 !important;
+}
+
+.page-header h1 {
+  margin-left: 125px;
+}
+
+body {
+  background: #867A8C;
+}
+
+small {
+  color: #504954 !important;
+}
+
+h1, h2, h3, h4 {
+  color: #3A2640;
+}
+
+a {
+  color: #572811;
+}
+
+a:hover {
+  color: #97461E;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+  border-top: 1px solid #94441D !important;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #A16337;
+}
