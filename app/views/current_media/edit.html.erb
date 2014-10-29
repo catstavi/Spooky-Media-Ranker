@@ -1,13 +1,8 @@
-<h1> Edit Current Medium </h1>
+<h3> Edit Current Medium </h3>
 
-<%= form_for @medium, url: @medium do |f| %>
-    <%= f.label :name %>
+<%= bootstrap_form_for @medium, url: @medium do |f| %>
     <%= f.text_field :name %>
-    <br>
-    <%= f.label :hometown %>
     <%= f.text_field :hometown %>
-    <br>
-    <%= f.label :description %>
     <%= f.text_area :description %>
     <br>
   <%= f.submit "Save" %>
