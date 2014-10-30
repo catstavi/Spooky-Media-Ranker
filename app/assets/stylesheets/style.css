@@ -1,6 +1,6 @@
 
 .page-header {
-  background: url('boo_ghost_sm.png');
+  background: url(image_path('boo_ghost_sm.png'));
   background-repeat: no-repeat;
   margin: 40px 0 20px 10px;
   border-bottom: 2px solid #BD5726 !important;
