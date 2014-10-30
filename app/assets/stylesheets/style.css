@@ -31,6 +31,37 @@ a:hover {
   text-decoration: none;
 }
 
+form {
+  display: inline;
+}
+
+form * {
+  display: inline;
+}
+
+.btn-default {
+  border: 1px solid #97461E;
+  background-color: #C65725;
+  color: #5C2410;
+}
+
+.btn-default:hover {
+  border: 1px solid #97461E;
+  background-color: #F06000;
+}
+
+.btn-danger {
+  border: 1px solid #776799;
+  background-color: #432A7A;
+  color: #776799;
+}
+
+.btn-danger:hover {
+  border: 1px solid #432A7A;
+  background-color: #776799;
+  color: #432A7A;
+}
+
 .btn {
   display: inline !important;
 }

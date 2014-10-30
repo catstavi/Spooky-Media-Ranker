@@ -7,6 +7,6 @@
 </section>
 <%= render 'shared/upvote_button', obj: @medium %>
 <%= button_to "Edit #{@medium.name}", edit_current_medium_path(@medium.id), method: :get, class: "btn btn-default" %>
-<%= button_to 'Delete', @medium, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"  %>
+<%= button_to 'Delete', @medium, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"  %>
 <%= button_to "View all Current Mediums", current_media_path, method: :get, class: "btn btn-default"  %>
 <%= button_to "View all Mediums", root_path, method: :get, class: "btn btn-default"  %>
