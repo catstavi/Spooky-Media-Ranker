@@ -1,4 +1,4 @@
-config.serve_static_assets = true
+
 
 require File.expand_path('../boot', __FILE__)
 
